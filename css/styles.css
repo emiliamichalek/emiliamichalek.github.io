@@ -1,0 +1,33 @@
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.project-carousel, .project-text {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+.swiper-slide img {
+    max-height: 250px;
+    object-fit: contain;
+    width: 100%;
+}
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+.accordion-body {
+    overflow-x: hidden;
+}
+
+.small-top-space {
+    padding-top: 10px;
+}
+
+.xs-top-space {
+    padding-top: 5px;
+}
+
+.medium-top-space {
+    padding-top: 20px;
+}
