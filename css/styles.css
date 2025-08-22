@@ -7,14 +7,23 @@
     flex: 1 1 45%;
     min-width: 300px;
 }
-.swiper-slide img {
-    max-height: 250px;
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 40vh;
     object-fit: contain;
+    height: 100%;
     width: 100%;
 }
 .swiper {
     width: 100%;
     overflow: hidden;
+}
+.swiper-pagination {
+    position: relative !important;
+    padding-top: 20px; /* Adjust this value as needed */
+    bottom: auto !important;
 }
 .accordion-body {
     overflow-x: hidden;
