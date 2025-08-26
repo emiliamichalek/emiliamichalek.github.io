@@ -33,7 +33,7 @@
 
         <!-- Projects Section -->
         <div class="container my-5">
-            <h2 class="mb-4">My Projects</h2>
+            <h2 class="mb-4">Here Are Some of My Projects</h2>
 
             <div class="accordion" id="projectsAccordion">
                 <div class="accordion-item">
@@ -74,7 +74,7 @@
 
                                 <!-- Description -->
                                 <div class="project-text">
-                                    <p>Filler Stock project description</p>
+                                    <p>As part of a team project for my databases course, I helped develop a full-stack investment simulator that lets users create accounts, build stock portfolios starting with $100,000 in virtual funds, and experiment with buying and selling in real time using live data from the yfinance API. My primary role was designing and implementing the complex SQL queries powering the app's core features, such as portfolio management, stock watchlists, collaborative investing, and sector-based comparisons with other site users. The platform also included advanced tools like company/ticker search, date-range performance lookups, and rankings of top market-cap investors on the site. While the database backend was hosted on GCP (now retired), the user-facing site showcases the functionality and design of the project.</p>
                                     <a href="https://github.com/emiliamichalek/rsa-encryption" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
                                 </div>
                             </div>
@@ -94,8 +94,18 @@
                                 <div class="project-carousel">
                                     <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="assets/images/missingImage.png" class="img-fluid rounded" alt="Screenshot 1"></div>
-                                            <div class="swiper-slide"><img src="assets/images/missingImage.png" class="img-fluid rounded" alt="Screenshot 2"></div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/RSA/RSAinput.png" class="img-fluid rounded" alt="Screenshot 1">
+                                                <p class="image-description">Input Files</p>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/RSA/RSAoutput.png" class="img-fluid rounded" alt="Screenshot 2">
+                                                <p class="image-description">Encoded and Decoded Output</p>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="assets/images/RSA/FileTestingOutput.png" class="img-fluid rounded" alt="Screenshot 1">
+                                                <p class="image-description">Automated validity checking output ensuring decoded output matches original.</p>
+                                            </div>
                                         </div>
                                         <div class="swiper-pagination"></div>
                                         <div class="swiper-button-prev"></div>
@@ -105,7 +115,7 @@
 
                                 <!-- Description -->
                                 <div class="project-text">
-                                    <p>Filler RSA project description.</p>
+                                    <p>I developed a C++ implementation of RSA encryption that securely processes arbitrary input files using user-specified key parameters (p, q, e). The program generates encrypted and decrypted outputs, automatically validating correctness by comparing results. Unlike simpler text-based implementations, this project handles all character sets - including non-ASCII symbols, foreign alphabets, and raw binary data - making it robust for diverse input types. This project shaped my ability to work with number theory, modular arithmetic, and file I/O while building a fully functional cryptosystem from the ground up.</p>
                                     <a href="https://github.com/emiliamichalek/rsa-encryption" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
                                 </div>
                             </div>
@@ -125,8 +135,14 @@
                                 <div class="project-carousel">
                                     <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><img src="assets/images/missingImage.png" class="img-fluid rounded" alt="Screenshot 1"></div>
-                                            <div class="swiper-slide"><img src="assets/images/missingImage.png" class="img-fluid rounded" alt="Screenshot 2"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/WelcomeMessage.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/introPlusFirstPage.png" class="img-fluid rounded" alt="Screenshot 2"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/SuccessfullyPlacedShip.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/shipOutsideRange.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/StartOfGameShipsInitialized.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/InitialGuessButMiss.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/PlayerFirstShipSunk.png" class="img-fluid rounded" alt="Screenshot 1"></div>
+                                            <div class="swiper-slide"><img src="assets/images/Battleship/EndOfTheGame.png" class="img-fluid rounded" alt="Screenshot 1"></div>
                                         </div>
                                         <div class="swiper-pagination"></div>
                                         <div class="swiper-button-prev"></div>
@@ -136,7 +152,7 @@
 
                                 <!-- Description -->
                                 <div class="project-text">
-                                    <p>Filler battleship project description</p>
+                                    <p>As my first major C++ project, I built a console-based Battleship game that emphasized intuitive user interaction and robust input validation. The program supports both a debug mode with visible computer boards and a standard mode with hidden boards, letting players set up ships with simple commands for orientation and placement. I implemented safeguards against invalid input, overlapping ships, and out-of-bounds placements to ensure smooth gameplay. Once the game begins, the player and computer alternate turns, with boards updated visually after each move using symbols for hits, misses, and unguessed positions. While the computer's strategy is randomized, the player receives clear feedback on hits and when ships are sunk, creating an accessible and engaging experience.</p>
                                     <a href="https://github.com/emiliamichalek/battleship" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
                                 </div>
                             </div>
