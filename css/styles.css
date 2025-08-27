@@ -67,3 +67,14 @@
 .image-description {
     text-align: center;
 }
+
+.resume-preview-img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.resume-preview-section {
+    padding-top: 10px;
+}
