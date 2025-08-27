@@ -12,18 +12,23 @@ const swiper = new Swiper(".mySwiper", {
 
 document.addEventListener("DOMContentLoaded", function() {
     const contact = {
-        emailUser: 'emiliamichalek1',
-        emailDomain: 'gmail.com', // Replace with your domain
-        phone: {
-            area: '773',
-            next: '808',
-            last: '0829'
+        as: 'lek1',
+        pt1: 'emil',
+        s4s: 'icha',
+        p2: 'iam',
+        sc: 'il.c',
+        awe: 'gma',
+        anm: 'om',
+        djw: {
+            kd: '773',
+            eb: '0829',
+            co: '808'
         }
     };
 
-    const fullEmail = `${contact.emailUser}@${contact.emailDomain}`;
-    const fullPhone = `(${contact.phone.area}) ${contact.phone.next}-${contact.phone.last}`;
-    const fullPhoneLink = `${contact.phone.area}-${contact.phone.next}-${contact.phone.last}`;
+    const jscfb = `${contact.pt1}${contact.p2}${contact.s4s}${contact.as}@${contact.awe}${contact.sc}${contact.anm}`;
+    const iwbfew = `(${contact.djw.kd}) ${contact.djw.co}-${contact.djw.eb}`;
+    const lsdbhv = `${contact.djw.kd}-${contact.djw.co}-${contact.djw.eb}`;
 
     const emailSpan = document.getElementById('email-address');
     const phoneSpan = document.getElementById('phone-number');
@@ -31,16 +36,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const copyPhoneBtn = document.getElementById('copy-phone-btn');
 
     if (emailSpan) {
-        emailSpan.innerHTML = `<a href="mailto:${fullEmail}">${fullEmail}</a>`;
+        emailSpan.innerHTML = `<a href="mailto:${jscfb}">${jscfb}</a>`;
     }
 
     if (phoneSpan) {
-        phoneSpan.innerHTML = `<a href="tel:${fullPhoneLink}">${fullPhone}</a>`;
+        phoneSpan.innerHTML = `<a href="tel:${lsdbhv}">${iwbfew}</a>`;
     }
 
     if (copyEmailBtn) {
         copyEmailBtn.addEventListener('click', function() {
-            navigator.clipboard.writeText(fullEmail).then(function() {
+            navigator.clipboard.writeText(jscfb).then(function() {
                 // Success feedback
                 copyEmailBtn.textContent = 'Copied!';
                 setTimeout(() => {
@@ -52,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (copyPhoneBtn) {
         copyPhoneBtn.addEventListener('click', function() {
-            navigator.clipboard.writeText(fullPhone).then(function() {
+            navigator.clipboard.writeText(iwbfew).then(function() {
                 // Success feedback
                 copyPhoneBtn.textContent = 'Copied!';
                 setTimeout(() => {
