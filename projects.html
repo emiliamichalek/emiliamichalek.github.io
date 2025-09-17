@@ -38,6 +38,41 @@
             <div class="accordion" id="projectsAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            GNSS Spoofing & Jamming Research
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <div class="project-content">
+                                <!-- Swiper Carousel -->
+                                <div class="project-carousel">
+                                    <div class="swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="assets/images/ResearchSymposium/Poster.png" class="img-fluid rounded" alt="My Research Poster"></div>
+                                            <div class="swiper-slide"><img src="assets/images/ResearchSymposium/Presenting.png" class="img-fluid rounded" alt="Photo of me presenting at the 2024 Summer Research Symposium"></div>
+                                            <div class="swiper-slide"><img src="assets/images/ResearchSymposium/GroupPhoto.png" class="img-fluid rounded" alt="Group Photo at the 2025 Summer Research Symposium"></div>
+                                        </div>
+                                        
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Description -->
+                                <div class="project-text">
+                                    <p>In Summer 2024 I joined the GearUp transfer & research program (continued beyond the term) and worked with a graduate student and Prof. Kirill Levchenko on Android-side GNSS spoofing/jamming detection that requires no extra sensors. Our core approach targeted spoofing (jamming is simpler to flag as overwhelming in-band noise) by exploiting Doppler: since real satellites move relative to a receiver, we can use public ephemerides to verify line-of-sight visibility and predict the received frequency; a terrestrial spoofer won't match the expected Doppler (or will deviate in a calculable way if the receiver is moving). I implemented the prediction pipeline in Python—ephemeris ingest, ECEF/ECI transforms, Earth rotation, receiver kinematics, and expected-frequency computation. To ground the model, I collected labeled datasets with Google's GNSS Logger (stationary baselines, constant-speed motion, and repeated back-and-forth walks on the UIUC Quad). We also ran small jamming trials with a HackRF and investigated spoofing testbeds (a GPS signal generator that proved unsuitable, then HackRF + GNU Radio). By January 2025, I wrapped my contributions to focus on coursework: the math and calculations were working, with remaining engineering around reliably extracting satellite IDs and frequencies across multiple constellations (GPS, GLONASS, Galileo, BeiDou).</p>
+                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#posterModal">
+                                        View Poster
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
                             Stock Investment Web Application
                         </button>
@@ -156,6 +191,24 @@
                                     <a href="https://github.com/emiliamichalek/battleship" target="_blank" class="btn btn-outline-primary">View on GitHub</a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="posterModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen">
+                    <div class="modal-content bg-dark">
+                        <div class="modal-header border-0">
+                            <!-- <h5 class="modal-title text-white">Poster (zoom & scroll)</h5> -->
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <!-- Use the built-in PDF viewer; users can zoom with controls/gesture -->
+                            <iframe
+                            src="assets/documents/GearUp_Poster_EmiliaMichalek.pdf"
+                            title="Research Poster PDF"
+                            style="width:100%;height:100%;border:0;"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
