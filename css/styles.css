@@ -1,3 +1,149 @@
+:root {
+    /* Core colors */
+    --bg: #ffffff;
+    --text: #111827;
+    --filter-value: 0;
+    --muted: #6b7280;
+    --card-bg: #ffffff;
+    --card-bg-opened: #cfe2ff;
+    --accent: #2563eb;
+    --link: #2563eb;
+
+    /* UI tokens */
+    --reg-border: rgba(0,0,0,0.06);
+    --contrast-border: rgba(0,0,0,0.240);
+    --dropdown-hover: rgba(0,0,0,0.04);
+    --dropdown-active: rgba(0,0,0,0.06);
+    --swiper-bullet: #cbd5e1;
+    --swiper-bullet-active: var(--accent);
+
+    /* Layout/effects */
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    /* nav active underline shadow (used as an upwards ombre under active nav link) */
+    --nav-active-shadow: rgb(37, 100, 235);
+
+    /* tells the UA which color scheme the site supports */
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b1220;
+        --text: #e6eef8;
+        --filter-value: 1;
+        --muted: #9aa6b2;
+        --card-bg: #0f1724;
+        --card-bg-opened: #3a4450;
+        --accent: #60a5fa;
+        --link: #60a5fa;
+        --shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        
+        --reg-border: rgba(255,255,255,0.06);
+        --contrast-border: rgba(255, 255, 255, 0.240);
+
+        --dropdown-hover: rgba(255,255,255,0.03);
+        --dropdown-active: rgba(255,255,255,0.06);
+
+        --swiper-bullet: #445566;
+        --swiper-bullet-active: var(--accent);
+        color-scheme: dark;
+        --nav-active-shadow: rgb(37, 100, 235);
+    }
+}
+
+/* manual theme override (via the toggle) definitions: */
+html[data-theme="dark"] {
+    --bg: #0b1220;
+    --text: #e6eef8;
+    --filter-value: 1;
+    --muted: #9aa6b2;
+    --card-bg: #0f1724;
+    --card-bg-opened: #3a4450;
+    --accent: #60a5fa;
+    --link: #60a5fa;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    --reg-border: rgba(255,255,255,0.06);
+    --contrast-border: rgba(255, 255, 255, 0.240);
+    --dropdown-hover: rgba(255,255,255,0.03);
+    --dropdown-active: rgba(255,255,255,0.06);
+    --swiper-bullet: #445566;
+    --swiper-bullet-active: var(--accent);
+    color-scheme: dark;
+    --nav-active-shadow: rgb(37, 100, 235); /* rgba(96, 165, 250, 1) */
+}
+
+html[data-theme="light"] {
+    --bg: #ffffff;
+    --text: #111827;
+    --filter-value: 0;
+    --muted: #6b7280;
+    --card-bg: #ffffff;
+    --card-bg-opened: #cfe2ff;
+    --accent: #2563eb;
+    --link: #2563eb;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    --reg-border: rgba(0,0,0,0.06);
+    --contrast-border: rgba(0, 0, 0, 0.240);
+    --dropdown-hover: rgba(0,0,0,0.04);
+    --dropdown-active: rgba(0,0,0,0.06);
+    --swiper-bullet: #cbd5e1;
+    --swiper-bullet-active: var(--accent);
+    color-scheme: light;
+    --nav-active-shadow: rgb(37, 100, 235);
+}
+
+/* global application of variables */
+html, body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+a { color: var(--link); }
+
+.small-top-space {
+    padding-top: 10px;
+}
+
+.medium-top-space {
+    padding-top: 20px;
+}
+
+.small-top-space {
+    padding-top: 5px;
+}
+
+
+
+
+
+/* project page/accordion styling: */
+.accordion .accordion-item {
+    background: transparent;
+}
+.accordion-button {
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--contrast-border);
+    box-shadow: var(--shadow);
+}
+.accordion-button.collapsed {
+    background: var(--card-bg);
+}
+.accordion-button:not(.collapsed) {
+  background: var(--card-bg-opened);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after {
+    filter: invert(var(--filter-value)) !important;
+}
+.accordion-body {
+    background: var(--card-bg);
+    color: var(--text);
+    border-top: 1px solid var(--contrast-border);
+    overflow-x: hidden;
+}
 .project-content {
     display: flex;
     align-items: center;
@@ -45,32 +191,31 @@
     position: relative !important;
     bottom: auto !important;
 }
-.accordion-body {
-    overflow-x: hidden;
+
+/* manually overriding list styling to match selected theme */
+.list-group .list-group-item {
+    background: var(--card-bg);
+    color: var(--text);
+    border-color: var(--contrast-border);
+}
+.list-group .btn {
+    color: var(--text) !important;
+    border-color: var(--contrast-border) !important;
+    background: transparent;
 }
 
+/* about me page styles: */
 .about-me-carousel {
     padding: 0px 20px 0px 20px;
-}
-
-.small-top-space {
-    padding-top: 10px;
-}
-
-.xs-top-space {
-    padding-top: 5px;
-}
-
-.medium-top-space {
-    padding-top: 20px;
 }
 
 .image-description {
     text-align: center;
 }
 
+/* contact me styles */
 .resume-preview-img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow);
     max-width: 800px;
     border-radius: 8px;
     margin: 0 auto;
@@ -78,6 +223,116 @@
     background-color: white;
 }
 
-.resume-preview-section {
-    padding-top: 10px;
+/* navbar styles: */
+.navbar {
+    background: var(--card-bg) !important;
+    box-shadow: var(--shadow);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: var(--text) !important;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--accent) !important;
+}
+
+/* nav bar active page shadow */
+.navbar .nav-link {
+    position: relative;
+    z-index: 5;
+}
+.navbar .nav-link.active::after,
+.navbar .nav-link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 14px;
+    pointer-events: none;
+    z-index: 6;
+
+    background: radial-gradient(
+        ellipse 120% 220% at 50% 180%,
+        var(--nav-active-shadow) 0%,
+        rgba(96, 165, 250, 0) 65%
+    );
+
+    border-radius: 999px;
+    filter: blur(4px);
+    opacity: 1;
+    transition: opacity 140ms ease;
+}
+
+
+.navbar .nav-link.active::after {
+    opacity: 1;
+}
+
+/* theme dropdown menu styling */
+.dropdown-menu {
+    background: var(--card-bg) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--reg-border);
+    box-shadow: var(--shadow);
+}
+.dropdown-item-text {
+    color: var(--text) !important;
+    padding-top: 6px;
+}
+.dropdown-menu .btn {
+    color: var(--text) !important;
+    border-color: var(--contrast-border) !important;
+}
+.dropdown-item {
+    color: var(--text) !important;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background: var(--dropdown-hover) !important;
+    color: var(--text) !important;
+}
+.dropdown-item.active {
+    background: var(--dropdown-active) !important;
+    color: var(--text) !important;
+}
+/* preventing "fading in" appearance of non-os theme colors */
+.dropdown-menu,
+.dropdown-item,
+.accordion-button,
+.accordion-body {
+    transition: background-color 0s !important;
+    -webkit-transition: background-color 0s !important;
+    -moz-transition: background-color 0s !important;
+}
+
+
+/* carousel styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--contrast-border);
+    border: none;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: var(--accent);
+}
+.swiper-pagination-bullet {
+    background: var(--swiper-bullet);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: var(--swiper-bullet-active);
 }

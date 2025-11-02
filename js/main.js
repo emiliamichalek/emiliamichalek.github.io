@@ -1,3 +1,5 @@
+console.log("Hi :D");
+
 const swiper = new Swiper(".mySwiper", {
     loop: true,
     pagination: {
