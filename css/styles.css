@@ -21,6 +21,7 @@
     --shadow: 0 0 10px rgba(0, 0, 0, 0.12);
     /* nav active underline shadow (used as an upwards ombre under active nav link) */
     --nav-active-shadow: rgb(37, 100, 235);
+    --nav-filter: 1;
 
     /* tells the UA which color scheme the site supports */
     color-scheme: light dark;
@@ -48,6 +49,7 @@
         --swiper-bullet-active: var(--accent);
         color-scheme: dark;
         --nav-active-shadow: rgb(37, 100, 235);
+        --nav-filter: 0;
     }
 }
 
@@ -70,6 +72,7 @@ html[data-theme="dark"] {
     --swiper-bullet-active: var(--accent);
     color-scheme: dark;
     --nav-active-shadow: rgb(37, 100, 235); /* rgba(96, 165, 250, 1) */
+    --nav-filter: 0;
 }
 
 html[data-theme="light"] {
@@ -90,6 +93,7 @@ html[data-theme="light"] {
     --swiper-bullet-active: var(--accent);
     color-scheme: light;
     --nav-active-shadow: rgb(37, 100, 235);
+    --nav-filter: 1;
 }
 
 /* global application of variables */
@@ -265,10 +269,15 @@ a { color: var(--link); }
     opacity: 1;
     transition: opacity 140ms ease;
 }
-
-
 .navbar .nav-link.active::after {
     opacity: 1;
+}
+.navbar .navbar-toggler-icon {
+    filter: invert(var(--nav-filter)) !important;
+    transition: filter 0.2s ease;
+}
+.navbar-toggler {
+    border-color: var(--contrast-border) !important;
 }
 
 /* theme dropdown menu styling */
